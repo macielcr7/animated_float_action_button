@@ -11,7 +11,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ##Screenshots
 
-<img src="screen.gif" height="500em" />
+<img src="https://raw.githubusercontent.com/macielcr7/animated_float_action_button/master/screen.gif" height="500em" />
 
 ## Usage
 
