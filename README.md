@@ -11,7 +11,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ##Screenshots
 
-<img src="screen.gif" height="300em" />
+<img src="screen.gif" height="500em" />
 
 ## Usage
 
