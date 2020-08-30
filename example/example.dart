@@ -15,7 +15,8 @@ class _ExamplePageState extends State<ExamplePage> {
     return FloatActionButtonText(
       onPressed: null,
       icon: Icons.add,
-      text: "Add",
+      text: "Ativar/Desativar Âncora",
+      textLeft: -215,
     );
   }
 
@@ -23,7 +24,8 @@ class _ExamplePageState extends State<ExamplePage> {
     return FloatActionButtonText(
       onPressed: null,
       icon: Icons.image,
-      text: "Image",
+      textLeft: -150,
+      text: "Visualizar Rota",
     );
   }
 
@@ -31,7 +33,8 @@ class _ExamplePageState extends State<ExamplePage> {
     return FloatActionButtonText(
       onPressed: null,
       icon: Icons.inbox,
-      text: "Inbox",
+      textLeft: -135,
+      text: "Desbloquear",
     );
   }
 
