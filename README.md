@@ -22,7 +22,7 @@ In your flutter project add the dependency:
 ```yalm
 dependencies:
     ...
-    animated_float_action_button: ^1.0.2
+    animated_float_action_button: ^1.0.3
 ```
 
 ## Example
@@ -31,9 +31,13 @@ dependencies:
 //Import package
 import 'package:animated_float_action_button/animated_floating_action_button.dart';
 ...
+final GlobalKey<AnimatedFloatingActionButtonState> fabKey = GlobalKey();
+
 Widget add() {
     return FloatActionButtonText(
-      onPressed: null,
+      onPressed: (){
+        fabKey.currentState.animate();
+      },
       icon: Icons.add,
       text: "Ativar/Desativar Âncora",
       textLeft: -215,
@@ -42,7 +46,9 @@ Widget add() {
 
   Widget image() {
     return FloatActionButtonText(
-      onPressed: null,
+      onPressed: (){
+        fabKey.currentState.animate();
+      },
       icon: Icons.image,
       textLeft: -150,
       text: "Visualizar Rota",
@@ -51,7 +57,9 @@ Widget add() {
 
   Widget inbox() {
     return FloatActionButtonText(
-      onPressed: null,
+      onPressed: (){
+        fabKey.currentState.animate();
+      },
       icon: Icons.inbox,
       textLeft: -135,
       text: "Desbloquear",
@@ -60,7 +68,7 @@ Widget add() {
 ...
 Scaffold(
     floatingActionButton: AnimatedFloatingActionButton(
-        //Fab list
+        key: fabKey,
         fabButtons: <Widget>[
             add(), 
             image(),

@@ -5,6 +5,7 @@ class ExamplePage extends StatefulWidget {
   ExamplePage({Key key, this.title}) : super(key: key);
 
   final String title;
+  final GlobalKey<AnimatedFloatingActionButtonState> fabKey = GlobalKey();
 
   @override
   _ExamplePageState createState() => _ExamplePageState();
@@ -13,7 +14,9 @@ class ExamplePage extends StatefulWidget {
 class _ExamplePageState extends State<ExamplePage> {
   Widget add() {
     return FloatActionButtonText(
-      onPressed: null,
+      onPressed: (){
+        widget.fabKey.currentState.animate();
+      },
       icon: Icons.add,
       text: "Ativar/Desativar Âncora",
       textLeft: -215,
@@ -22,7 +25,9 @@ class _ExamplePageState extends State<ExamplePage> {
 
   Widget image() {
     return FloatActionButtonText(
-      onPressed: null,
+      onPressed: (){
+        widget.fabKey.currentState.animate();
+      },
       icon: Icons.image,
       textLeft: -150,
       text: "Visualizar Rota",
@@ -31,7 +36,9 @@ class _ExamplePageState extends State<ExamplePage> {
 
   Widget inbox() {
     return FloatActionButtonText(
-      onPressed: null,
+      onPressed: (){
+        widget.fabKey.currentState.animate();
+      },
       icon: Icons.inbox,
       textLeft: -135,
       text: "Desbloquear",
@@ -46,6 +53,7 @@ class _ExamplePageState extends State<ExamplePage> {
       ),
       body: Container(),
       floatingActionButton: AnimatedFloatingActionButton(
+        key: widget.fabKey,
         fabButtons: <Widget>[
           add(),
           image(),

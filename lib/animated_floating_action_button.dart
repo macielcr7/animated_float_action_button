@@ -21,11 +21,11 @@ class AnimatedFloatingActionButton extends StatefulWidget {
       : super(key: key);
 
   @override
-  _AnimatedFloatingActionButtonState createState() =>
-      _AnimatedFloatingActionButtonState();
+  AnimatedFloatingActionButtonState createState() =>
+      AnimatedFloatingActionButtonState();
 }
 
-class _AnimatedFloatingActionButtonState
+class AnimatedFloatingActionButtonState
     extends State<AnimatedFloatingActionButton>
     with SingleTickerProviderStateMixin {
   bool isOpened = false;

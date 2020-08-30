@@ -1,3 +1,7 @@
+## [1.0.3] - Release
+
+* Update _AnimatedFloatingActionButtonState to AnimatedFloatingActionButtonState.
+
 ## [1.0.2] - Release
 
 * Update example Image.
