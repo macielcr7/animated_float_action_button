@@ -1,6 +1,6 @@
 name: animated_float_action_button
 description: Allows you to create a collapsible list of float buttons.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/macielcr7/animated_float_action_button
 
 environment:

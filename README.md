@@ -22,7 +22,7 @@ In your flutter project add the dependency:
 ```yalm
 dependencies:
     ...
-    animated_float_action_button: ^1.0.0
+    animated_float_action_button: ^1.0.1
 ```
 
 ## Example
@@ -35,7 +35,8 @@ Widget add() {
     return FloatActionButtonText(
       onPressed: null,
       icon: Icons.add,
-      text: "Add",
+      text: "Ativar/Desativar Âncora",
+      textLeft: -215,
     );
   }
 
@@ -43,7 +44,8 @@ Widget add() {
     return FloatActionButtonText(
       onPressed: null,
       icon: Icons.image,
-      text: "Image",
+      textLeft: -150,
+      text: "Visualizar Rota",
     );
   }
 
@@ -51,7 +53,8 @@ Widget add() {
     return FloatActionButtonText(
       onPressed: null,
       icon: Icons.inbox,
-      text: "Inbox",
+      textLeft: -135,
+      text: "Desbloquear",
     );
   }
 ...
