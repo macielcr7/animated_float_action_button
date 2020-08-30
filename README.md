@@ -22,7 +22,7 @@ In your flutter project add the dependency:
 ```yalm
 dependencies:
     ...
-    animated_float_action_button: ^1.0.1
+    animated_float_action_button: ^1.0.2
 ```
 
 ## Example
