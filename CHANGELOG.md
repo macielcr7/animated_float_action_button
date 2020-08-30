@@ -1,3 +1,7 @@
+## [1.0.2] - Release
+
+* Update example Image.
+
 ## [1.0.1] - Release
 
 * Update example.
