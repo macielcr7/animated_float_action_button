@@ -2,9 +2,9 @@ import 'package:animated_float_action_button/animated_floating_action_button.dar
 import 'package:flutter/material.dart';
 
 class ExamplePage extends StatefulWidget {
-  ExamplePage({Key key, this.title}) : super(key: key);
+  ExamplePage({Key? key, this.title}) : super(key: key);
 
-  final String title;
+  final String? title;
   final GlobalKey<AnimatedFloatingActionButtonState> fabKey = GlobalKey();
 
   @override
@@ -15,7 +15,7 @@ class _ExamplePageState extends State<ExamplePage> {
   Widget add() {
     return FloatActionButtonText(
       onPressed: (){
-        widget.fabKey.currentState.animate();
+        widget.fabKey.currentState!.animate();
       },
       icon: Icons.add,
       text: "Ativar/Desativar Âncora",
@@ -26,7 +26,7 @@ class _ExamplePageState extends State<ExamplePage> {
   Widget image() {
     return FloatActionButtonText(
       onPressed: (){
-        widget.fabKey.currentState.animate();
+        widget.fabKey.currentState!.animate();
       },
       icon: Icons.image,
       textLeft: -150,
@@ -37,7 +37,7 @@ class _ExamplePageState extends State<ExamplePage> {
   Widget inbox() {
     return FloatActionButtonText(
       onPressed: (){
-        widget.fabKey.currentState.animate();
+        widget.fabKey.currentState!.animate();
       },
       icon: Icons.inbox,
       textLeft: -135,
@@ -49,7 +49,7 @@ class _ExamplePageState extends State<ExamplePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(widget.title!),
       ),
       body: Container(),
       floatingActionButton: AnimatedFloatingActionButton(

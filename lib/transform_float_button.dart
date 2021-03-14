@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class TransformFloatButton extends StatelessWidget {
-  final Widget floatButton;
-  final double translateValue;
+  final Widget? floatButton;
+  final double? translateValue;
 
   TransformFloatButton({this.floatButton, this.translateValue})
       : super(key: ObjectKey(floatButton));
@@ -12,7 +12,7 @@ class TransformFloatButton extends StatelessWidget {
     return Transform(
       transform: Matrix4.translationValues(
         0.0,
-        translateValue,
+        translateValue!,
         0.0,
       ),
       child: floatButton,

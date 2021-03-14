@@ -7,13 +7,13 @@ import 'package:flutter/material.dart';
 export 'float_action_button_text.dart';
 
 class AnimatedFloatingActionButton extends StatefulWidget {
-  final List<Widget> fabButtons;
-  final Color colorStartAnimation;
-  final Color colorEndAnimation;
-  final AnimatedIconData animatedIconData;
+  final List<Widget>? fabButtons;
+  final Color? colorStartAnimation;
+  final Color? colorEndAnimation;
+  final AnimatedIconData? animatedIconData;
 
   AnimatedFloatingActionButton(
-      {Key key,
+      {Key? key,
       this.fabButtons,
       this.colorStartAnimation,
       this.colorEndAnimation,
@@ -30,10 +30,10 @@ class AnimatedFloatingActionButtonState
     with SingleTickerProviderStateMixin {
   bool isOpened = false;
   bool isOpenedVisible = false;
-  AnimationController _animationController;
-  Animation<Color> _buttonColor;
-  Animation<double> _animateIcon;
-  Animation<double> _translateButton;
+  late AnimationController _animationController;
+  late Animation<Color?> _buttonColor;
+  late Animation<double> _animateIcon;
+  late Animation<double> _translateButton;
   Curve _curve = Curves.easeOut;
   double _fabHeight = 56.0;
 
@@ -101,7 +101,7 @@ class AnimatedFloatingActionButtonState
         onPressed: animate,
         tooltip: 'Toggle',
         child: AnimatedIcon(
-          icon: widget.animatedIconData,
+          icon: widget.animatedIconData!,
           progress: _animateIcon,
         ),
       ),
@@ -109,14 +109,14 @@ class AnimatedFloatingActionButtonState
   }
 
   List<Widget> _setFabButtons() {
-    List<Widget> processButtons = List<Widget>();
-    for (int i = 0; i < widget.fabButtons.length; i++) {
+    List<Widget> processButtons = <Widget>[];
+    for (int i = 0; i < widget.fabButtons!.length; i++) {
       processButtons.add(TransformFloatButton(
         floatButton: Visibility(
-          child: widget.fabButtons[i],
+          child: widget.fabButtons![i],
           visible: isOpenedVisible,
         ),
-        translateValue: _translateButton.value * (widget.fabButtons.length - i),
+        translateValue: _translateButton.value * (widget.fabButtons!.length - i),
       ));
     }
     processButtons.add(toggle());

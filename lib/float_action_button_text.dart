@@ -2,13 +2,13 @@ import 'package:animated_float_action_button/bounce_in_left_container.dart';
 import 'package:flutter/material.dart';
 
 class FloatActionButtonText extends StatelessWidget {
-  final String text;
-  final IconData icon;
+  final String? text;
+  final IconData? icon;
   final double textTop;
   final double textLeft;
-  final VoidCallback onPressed;
+  final VoidCallback? onPressed;
   const FloatActionButtonText({
-    Key key,
+    Key? key,
     this.icon,
     this.text,
     this.textLeft = -110,
@@ -33,7 +33,7 @@ class FloatActionButtonText extends StatelessWidget {
                   child: Container(
                     padding: EdgeInsets.all(8.0),
                     child: Text(
-                      text,
+                      text!,
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w500,
