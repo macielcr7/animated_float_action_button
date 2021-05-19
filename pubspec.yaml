@@ -1,10 +1,10 @@
 name: animated_float_action_button
 description: Allows you to create a collapsible list of float buttons.
-version: 1.0.3
+version: 1.0.3-nullsafety.0
 homepage: https://github.com/macielcr7/animated_float_action_button
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
 
 dependencies:
   flutter:
